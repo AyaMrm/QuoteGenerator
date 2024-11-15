@@ -1,2 +1,7 @@
 # QuoteGenerator
-html/css/js/express.js/mongodb
+#Tools
+FrontEnd :
+- html
+- css
+- js
+BackEnd :
