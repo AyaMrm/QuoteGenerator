@@ -1,4 +1,3 @@
-// Importer les modules nécessaires
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
@@ -10,15 +9,15 @@ mongoose.connect("mongodb+srv://mimikhl2005:HelloWorld000@cluster0.mehlf.mongodb
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
+// mettre le schema du quote !
 const quoteSchema = new mongoose.Schema({
   text: String,
   author: String,
 });
-
+// puis le modele 
 const Quote = mongoose.model("Quote", quoteSchema);
 
-  
+  // avoir des random quotes de la base de donner !!
 app.get("/quotes/random", async (req, res) => {
     try {
       const count = await Quote.countDocuments();
